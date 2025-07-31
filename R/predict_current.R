@@ -83,7 +83,7 @@ predict_CurrentSDM <- function(input_folders, mdl_paths) {
       print(pred_ras)
       writeRaster(pred_ras,
                   filename = paste0(
-                    "I:/SDMs_France/Results/current_sdms/",
+                    "/lustre1/scratch/348/vsc34871/SDM_current/Results/",
                     species_name, "_tile_", i, ".tif"
                   ),
                   overwrite = TRUE
@@ -104,7 +104,7 @@ predict_CurrentSDM <- function(input_folders, mdl_paths) {
         print(pred_ras)
         writeRaster(pred_ras,
                     filename = paste0(
-                      "I:/SDMs_France/Results/current_sdms/",
+                      "/lustre1/scratch/348/vsc34871/SDM_current/Results/",
                       species_name, "_tile_", i, "_model", k, ".tif"
                     ),
                     overwrite = TRUE

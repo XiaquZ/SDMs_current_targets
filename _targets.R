@@ -39,18 +39,18 @@ tar_source()
 tar_plan(
   # Load the required paths
   input_folders = list(
-    cec = "I:/SDMs_France/pred_tiles/cec/",
-    CHELSA_bio12_EU_2000.2019 = "I:/SDMs_France/pred_tiles/CHELSA_bio12_EU_2000.2019/",
-    CHELSA_bio15_EU_2000.2019 = "I:/SDMs_France/pred_tiles/CHELSA_bio15_EU_2000.2019/",
-    clay = "I:/SDMs_France/pred_tiles/clay/",
-    Elevation = "I:/SDMs_France/pred_tiles/Elevation/",
-    Micro_BIO5_EU_CHELSAbased_2000.2020 = "I:/SDMs_France/pred_tiles/Micro_BIO5_EU_CHELSAbased_2000.2020/",
-    Micro_BIO6_EU_CHELSAbased_2000.2020 = "I:/SDMs_France/pred_tiles/Micro_BIO6_EU_CHELSAbased_2000.2020/",
-    Slope = "I:/SDMs_France/pred_tiles/Slope/"
+    cec = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/cec/",
+    CHELSA_bio12_EU_2000.2019 = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/CHELSA_bio12_EU_2000.2019/",
+    CHELSA_bio15_EU_2000.2019 = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/CHELSA_bio15_EU_2000.2019/",
+    clay = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/clay/",
+    Elevation = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/Elevation/",
+    Micro_BIO5_EU_CHELSAbased_2000.2020 = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/Micro_BIO5_EU_CHELSAbased_2000.2020/",
+    Micro_BIO6_EU_CHELSAbased_2000.2020 = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/Micro_BIO6_EU_CHELSAbased_2000.2020/",
+    Slope = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/Slope/"
   ),
   tar_target(mdl_paths,
              list.files(
-               "I:/SDMs_France/Results/models/",
+               "/lustre1/scratch/348/vsc34871/SDM_current/Models/",
                full.names = TRUE
              )),
   # Make future species distributions

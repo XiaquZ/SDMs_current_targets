@@ -1,21 +1,21 @@
 predict_CurrentSDM <- function(input_folders, mdl_paths) {
-  # 1. Point to the folder where your tiles live:
-  tile_dir <- input_folders[[1]]
+  # # 1. Point to the folder where your tiles live:
+  # tile_dir <- input_folders[[1]]
   
-  # 2. List only the cec_*.tif files
-  tile_files <- list.files(tile_dir,
-                           pattern = ".tif",
-                           full.names = TRUE)
+  # # 2. List only the cec_*.tif files
+  # tile_files <- list.files(tile_dir,
+  #                          pattern = ".tif",
+  #                          full.names = TRUE)
   
-  # 3. Extract the numeric part of each filename
-  tile_nums <- as.integer( sub("^cec_(\\d+)\\.tif$", "\\1", basename(tile_files)) )
-  # 4. Sort them (optional, but usually handy)
-  o <- order(tile_nums)
-  tile_nums  <- tile_nums[o]
-  tile_files <- tile_files[o]
+  # # 3. Extract the numeric part of each filename
+  # tile_nums <- as.integer( sub("^cec_(\\d+)\\.tif$", "\\1", basename(tile_files)) )
+  # # 4. Sort them (optional, but usually handy)
+  # o <- order(tile_nums)
+  # tile_nums  <- tile_nums[o]
+  # tile_files <- tile_files[o]
   
   # Iterate through tiles (assumes tiles are numbered from 1 to 9)
-  for (i in tile_nums) {
+  for (i in 62:99) {
     
     # Initialize an empty list to store predictors for this tile
     # Define predictor keywords
@@ -41,7 +41,7 @@ predict_CurrentSDM <- function(input_folders, mdl_paths) {
       message(paste0("Skipping tile ", i, " because one or more predictor files are missing."))
       next
     }
-    
+
     stack_preds <- vrt(files, options="-separate") # if there is no this i number tile, go to next tile.
     names(stack_preds) <- c(
       "Micro_BIO5_EU_CHELSAbased_2000.2020", "Micro_BIO6_EU_CHELSAbased_2000.2020",

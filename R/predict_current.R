@@ -35,6 +35,13 @@ predict_CurrentSDM <- function(input_folders, mdl_paths) {
       # Construct the file path
       files <- c(files, paste0(folder, predictor, "_", i, ".tif"))
     }
+
+    # --- NEW: Check if all files exist for this tile ---
+    if (!all(file.exists(files))) {
+      message(paste0("Skipping tile ", i, " because one or more predictor files are missing."))
+      next
+    }
+    
     stack_preds <- vrt(files, options="-separate") # if there is no this i number tile, go to next tile.
     names(stack_preds) <- c(
       "Micro_BIO5_EU_CHELSAbased_2000.2020", "Micro_BIO6_EU_CHELSAbased_2000.2020",

@@ -46,7 +46,9 @@ tar_plan(
     Elevation = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/Elevation/",
     Micro_BIO5_EU_CHELSAbased_2000.2020 = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/Micro_BIO5_EU_CHELSAbased_2000.2020/",
     Micro_BIO6_EU_CHELSAbased_2000.2020 = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/Micro_BIO6_EU_CHELSAbased_2000.2020/",
-    Slope = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/Slope/"
+    Slope = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/Slope/",
+    TWI = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/TWI/",
+    phh2o_0_30_WeightedMean = "/lustre1/scratch/348/vsc34871/SDM_current/pred_tiles/phh2o_0_30_WeightedMean/"
   ),
   tar_target(mdl_paths,
              list.files(

@@ -14,15 +14,15 @@ predict_CurrentSDM <- function(input_folders, mdl_paths) {
   # tile_nums  <- tile_nums[o]
   # tile_files <- tile_files[o]
   
-  # Iterate through tiles (assumes tiles are numbered from 1 to 9)
-  for (i in 79:99) {
+  # Iterate through tiles (assumes tiles are numbered from 1 to 99)
+  for (i in 1:99) {
     
     # Initialize an empty list to store predictors for this tile
     # Define predictor keywords
     predictors <- c(
       "Micro_BIO5_EU_CHELSAbased_2000.2020", "Micro_BIO6_EU_CHELSAbased_2000.2020",
       "CHELSA_bio12_EU_2000.2019", "CHELSA_bio15_EU_2000.2019", "cec", "clay",
-      "Slope", "Elevation"
+      "Slope", "Elevation", "TWI", "phh2o_0_30_WeightedMean"
     )
     
     # Get file paths of all predictors
@@ -46,7 +46,7 @@ predict_CurrentSDM <- function(input_folders, mdl_paths) {
     names(stack_preds) <- c(
       "Micro_BIO5_EU_CHELSAbased_2000.2020", "Micro_BIO6_EU_CHELSAbased_2000.2020",
       "CHELSA_bio12_EU_2000.2019", "CHELSA_bio15_EU_2000.2019", "cec", "clay",
-      "Slope", "Elevation"
+      "Slope", "Elevation", "TWI", "phh2o_0_30_WeightedMean"
     )
     print(stack_preds)
     
@@ -118,6 +118,5 @@ predict_CurrentSDM <- function(input_folders, mdl_paths) {
         )
       }
     }
-    
   }
 }

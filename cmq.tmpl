@@ -7,7 +7,7 @@
 ##SBATCH --partition=bigmem
 #SBATCH --time={{ walltime | 24:00:00 }}
 #SBATCH -M wice
-#SBATCH --reservation=rocky9_pilot
+##SBATCH --reservation=rocky9_pilot
 #SBATCH -A lp_climateplants
 
 source $VSC_HOME/.bashrc

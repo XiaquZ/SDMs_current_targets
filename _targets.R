@@ -25,7 +25,7 @@ tar_option_set(
       job_name = "Current-SDMs",
       per_cpu_mem = "21000mb", #"3470mb"(wice thin node), #"21000mb" (genius bigmem)"5100mb"
       n_tasks = 1,
-      per_task_cpus = 36,
+      per_task_cpus = 72,
       walltime = "24:00:00"
     ))
   )

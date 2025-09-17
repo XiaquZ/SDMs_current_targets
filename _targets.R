@@ -23,9 +23,9 @@ tar_option_set(
   resources = tar_resources(
     clustermq = tar_resources_clustermq(template = list(
       job_name = "Current-SDMs",
-      per_cpu_mem = "5100mb", #"3470mb", #"21000mb"
+      per_cpu_mem = "3470mb", #"3470mb"(wice thin node), #"21000mb"#"5100mb"
       n_tasks = 1,
-      per_task_cpus = 36,
+      per_task_cpus = 72,
       walltime = "24:00:00"
     ))
   )

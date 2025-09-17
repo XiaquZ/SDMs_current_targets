@@ -15,7 +15,7 @@ predict_CurrentSDM <- function(input_folders, mdl_paths) {
   # tile_files <- tile_files[o]
   
   # Iterate through tiles (assumes tiles are numbered from 1 to 99)
-  for (i in 77:99) {
+  for (i in 78:99) {
     
     # Initialize an empty list to store predictors for this tile
     # Define predictor keywords

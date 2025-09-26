@@ -2,10 +2,10 @@
 #SBATCH --job-name={{ job_name }}
 #SBATCH --mem-per-cpu={{ per_cpu_mem }}
 #SBATCH --array=1-{{ n_jobs }}
-#SBATCH --ntasks={{ n_tasks | 1 }}
-#SBATCH --cpus-per-task={{ per_task_cpus | 36 }}
-#SBATCH --partition=bigmem
-#SBATCH --time={{ walltime | 24:00:00 }}
+#SBATCH --ntasks={{ n_tasks | 2 }}
+#SBATCH --cpus-per-task={{ per_task_cpus | 14 }}
+#SBATCH --partition=superdome
+#SBATCH --time={{ walltime | 48:00:00 }}
 #SBATCH -M genius
 ##SBATCH --reservation=rocky9_pilot
 #SBATCH -A lp_climateplants

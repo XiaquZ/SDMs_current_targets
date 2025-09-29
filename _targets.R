@@ -26,7 +26,7 @@ tar_option_set(
       per_cpu_mem = "53500mb", #"3470mb"(wice thin node), #"21000mb" (genius bigmem， hugemem)"5100mb"
       n_tasks = 2,
       per_task_cpus = 14,
-      walltime = "48:00:00"
+      walltime = "65:00:00"
     ))
   )
 )
@@ -52,7 +52,7 @@ tar_plan(
   ),
   tar_target(mdl_paths,
              list.files(
-               "/lustre1/scratch/348/vsc34871/SDM_current/Models/",
+               "/lustre1/scratch/348/vsc34871/SDM_current/Models02/",
                full.names = TRUE
              )),
   # Make future species distributions

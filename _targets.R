@@ -52,7 +52,7 @@ tar_plan(
   ),
   tar_target(mdl_paths,
              list.files(
-               "/lustre1/scratch/348/vsc34871/SDM_current/Models02/",
+               "/lustre1/scratch/348/vsc34871/SDM_current/Models/",
                full.names = TRUE
              )),
   # Make future species distributions
